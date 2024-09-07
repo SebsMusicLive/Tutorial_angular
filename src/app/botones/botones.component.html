@@ -1,19 +1,11 @@
 <div>
-    <button [class]="{
-        'disabled':button_disabled,
-        'btn':true,
-        'btn-danger':true
-    }" class=""(click)="text_color='text-danger'">Color rojo</button>
-    <button [class]="{
-        'disabled':button_disabled
-    }" class="btn btn-success mx-2"(click)="text_color='text-success'">Color verde</button>
-    <button [class]="{
-        'disabled':button_disabled
-    }" class="btn btn-primary"(click)="text_color='text-primary'">Color azul</button>
+    <button class="btn btn-primary" (click)="img='https://images.pexels.com/photos/25189483/pexels-photo-25189483/free-photo-of-flores-petalos-orquideas-tiro-vertical.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'">
+        Imagen 1
+    </button>
+    
+    <button class="btn btn-danger" (click)="img='https://images.pexels.com/photos/25686154/pexels-photo-25686154/free-photo-of-persona-cafe-mano-agua.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'">
+        Imagen 2
+    </button>
 </div>
 
-<p [class]="text_color">Texto que va a cambiar de color</p>
-
-<button class="btn btn-secondary" (click)="button_disabled=!button_disabled">
-    Activar/Desactivar
-</button>
+<img [src]="img" alt="">
