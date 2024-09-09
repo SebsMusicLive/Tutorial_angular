@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-body">
-        <form (ngSubmit)="procesar()">
+        <form (ngSubmit)="procesar()" #formContact="ngForm">
             <div>
                 <label for="" class="form-label">Nombre:</label>
                 <input type="text" name="nombre" class="form-control" placeholder="Por favor ingrese un nombre" [(ngModel)]="persona.nombre" required #name="ngModel">
@@ -19,13 +19,9 @@
                 </div>
             </div>
 
-            <button class="btn btn-primary mt-2">Enviar</button>
+            <button class="btn btn-primary mt-2" [disabled]="formContact.invalid">Enviar</button>
         </form>
     </div>
 </div>
 
-{{ name.errors | json }}
-
-<hr>
-
-{{ name.valid }}
+{{ formContact.valid }}
