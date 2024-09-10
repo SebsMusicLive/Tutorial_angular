@@ -1,14 +1,15 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-formulario3',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './formulario3.component.html',
   styleUrl: './formulario3.component.css'
 })
 export class Formulario3Component {
-  name= new FormControl('Sebas');
-  email= new FormControl('sebas@gmail.com');
+  name= new FormControl('', Validators.required);
+  email= new FormControl('', [Validators.required, Validators.email]);
 }
