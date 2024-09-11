@@ -14,7 +14,7 @@
                 <label for="" class="form-label">Email</label>
     
                 <input type="email" formControlName="email" name="" id="" placeholder="Por favor ingrese su email" class="form-control">
-                <div class="alert alert-danger mt-2" [hidden]="email?.valid || email.pristine">
+                <div class="alert alert-danger mt-2" [hidden]="email.valid || email.pristine">
                 <span *ngIf="email.errors?.['required']">
                         El email es obligatorio
                     </span>
