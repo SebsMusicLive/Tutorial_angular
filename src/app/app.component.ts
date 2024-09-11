@@ -6,13 +6,14 @@ import { FormularioComponent } from "./formulario/formulario.component";
 import { BuclesComponent } from './bucles/bucles.component';
 import { SwitchComponent } from './switch/switch.component';
 import { Formulario2Component } from "./formulario2/formulario2.component";
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Formulario3Component } from "./formulario3/formulario3.component";
+import { ChildrenComponent } from "./children/children.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ContadorComponent, BotonesComponent, FormularioComponent, BuclesComponent, SwitchComponent, Formulario2Component, ReactiveFormsModule, Formulario3Component],
+  imports: [RouterOutlet, FormsModule, ContadorComponent, BotonesComponent, FormularioComponent, BuclesComponent, SwitchComponent, Formulario2Component, ReactiveFormsModule, Formulario3Component, ChildrenComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
