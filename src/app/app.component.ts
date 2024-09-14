@@ -9,11 +9,13 @@ import { Formulario2Component } from "./formulario2/formulario2.component";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Formulario3Component } from "./formulario3/formulario3.component";
 import { ChildrenComponent } from "./children/children.component";
+import { AddMessageComponent } from "./add-message/add-message.component";
+import { ListMessageComponent } from "./list-message/list-message.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, ContadorComponent, BotonesComponent, FormularioComponent, BuclesComponent, SwitchComponent, Formulario2Component, ReactiveFormsModule, Formulario3Component, ChildrenComponent],
+  imports: [RouterOutlet, FormsModule, ContadorComponent, BotonesComponent, FormularioComponent, BuclesComponent, SwitchComponent, Formulario2Component, ReactiveFormsModule, Formulario3Component, ChildrenComponent, AddMessageComponent, ListMessageComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
